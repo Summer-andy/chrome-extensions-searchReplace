@@ -2,11 +2,11 @@
 	// 清单文件的版本，这个必须写，而且必须是2
 	"manifest_version": 2,
 	// 插件的名称
-	"name": "demo",
+	"name": "search and replace",
 	// 插件的版本
 	"version": "1.0.0",
 	// 插件描述
-	"description": "__MSG_pluginDesc__",
+	"description": "替换网页中文本信息",
 	// 图标，一般偷懒全部用一个尺寸的也没问题
 	"icons":
 	{
@@ -26,7 +26,7 @@
 	{
 		"default_icon": "img/icon.png",
 		// 图标悬停时的标题，可选
-		"default_title": "这是一个示例Chrome插件",
+		"default_title": "文本替换插件",
 		"default_popup": "popup.html"
 	},
 	// 当某些特定页面打开才显示的图标
@@ -46,7 +46,7 @@
 			// 多个JS按顺序注入
 			"js": ["js/jquery-1.8.3.js", "js/content-script.js"],
 			// JS的注入可以随便一点，但是CSS的注意就要千万小心了，因为一不小心就可能影响全局样式
-			"css": ["css/custom.css"],
+			// "css": ["css/custom.css"],
 			// 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
 			"run_at": "document_start"
 		},
@@ -71,26 +71,25 @@
 	// 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
 	"web_accessible_resources": ["js/inject.js"],
 	// 插件主页，这个很重要，不要浪费了这个免费广告位
-	"homepage_url": "https://www.baidu.com",
-	// 覆盖浏览器默认页面
-	"chrome_url_overrides":
-	{
-		// 覆盖浏览器默认的新标签页
-		"newtab": "newtab.html"
-	},
-	// Chrome40以前的插件配置页写法
-	"options_page": "options.html",
-	// Chrome40以后的插件配置页写法，如果2个都写，新版Chrome只认后面这一个
-	"options_ui":
-	{
-		"page": "options.html",
-		// 添加一些默认的样式，推荐使用
-		"chrome_style": true
-	},
+	"homepage_url": "https://github.com/Summer-andy/chrome-extensions-searchReplace",
+	// // 覆盖浏览器默认页面
+	// "chrome_url_overrides":
+	// {
+	// 	// 覆盖浏览器默认的新标签页
+	// 	"newtab": "newtab.html"
+	// },
+	// // Chrome40以前的插件配置页写法
+	// "options_page": "options.html",
+	// // Chrome40以后的插件配置页写法，如果2个都写，新版Chrome只认后面这一个
+	// "options_ui":
+	// {
+	// 	"page": "options.html",
+	// 	// 添加一些默认的样式，推荐使用
+	// 	"chrome_style": true
+	// },
 	// 向地址栏注册一个关键字以提供搜索建议，只能设置一个关键字
-	"omnibox": { "keyword" : "go" },
+	"omnibox": { "keyword" : "search" },
 	// 默认语言
-	"default_locale": "zh_CN",
+	"default_locale": "zh_CN"
 	// devtools页面入口，注意只能指向一个HTML文件，不能是JS文件
-	"devtools_page": "devtools.html"
 }
