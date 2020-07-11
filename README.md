@@ -23,4 +23,8 @@
 
 ## Why is there this project?
 
-### When doing product ppt, some nouns in certain pages need to be replaced uniformly. I also found some plug-ins in the Google expansion store, such as two plug-ins with a higher download volume: 1. Find & Replace for Text Editing 2. FindR. But these two plug-ins have problems. After the first plug-in replaces the text, all button hyperlinks cannot be clicked. The second plugin cannot be replaced at all, and it seems to be no longer maintained. So I decided to develop a plugin to complete this task.
+When doing product ppt, some nouns in certain pages need to be replaced uniformly. I also found some plug-ins in the Google expansion store, such as two plug-ins with a higher download volume: 1. Find & Replace for Text Editing 2. FindR. But these two plug-ins have problems. After the first plug-in replaces the text, all button hyperlinks cannot be clicked. The second plugin cannot be replaced at all, and it seems to be no longer maintained. So I decided to develop a plugin to complete this task.
+
+## todoList
+- [ ] Optimize the replacement method
+- [ ] Optimize interactive experience
