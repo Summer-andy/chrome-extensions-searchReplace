@@ -23,11 +23,11 @@ function sendMessageToContentScript(message, callback)
 
 
 // 修改内容
-$('#update_font_size').click(() => {
+$('#replace_cmd').click(() => {
 	const replaceData = $('#example').val();
 	const targetData = $('#example2').val();
 	const isChecked = $('#four').prop('checked')
-	sendMessageToContentScript({cmd:'update_font_size', size: 42, replaceData, targetData, isChecked}, function(response){});
+	sendMessageToContentScript({cmd:'replace_cmd', size: 42, replaceData, targetData, isChecked}, function(response){});
 });
 
 
