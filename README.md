@@ -27,8 +27,8 @@ When doing product ppt, some nouns in certain pages need to be replaced uniforml
 
 
 ## todoList
-- [X] Support text substitution
-- [ ] Optimize the replacement method
+- [x] Support text substitution
+- [x] Optimize the replacement method
 - [ ] Optimize interactive experience
 
 
