@@ -11,10 +11,10 @@ String.prototype.replaceString = function(index,str0,str1) {
 	return this.slice(0, index) + str1 + this.slice(index + str0.length, this.length)
 }
 
-
 // 接收来自后台的消息
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
+	var replaceCount = 0;
 	if(request.cmd == 'replace_cmd') {
 		let str = document.body.innerHTML;
 		const replaceData = request.replaceData;  // 被替换的内容
@@ -26,22 +26,26 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 				const idx = findStrIndex(str, replaceData, index - 1);
 				if(isReplaceWord(idx, str)) {
 					str = str.replaceString(idx, replaceData, targetData);
+					replaceCount++;
 				}
 			}
 		} else {
 			let index = 0
 			while (index < arr) {
-				index++
+				index++;
 				const idx = findStrIndex(str, replaceData, index);
 				if(isReplaceWord(idx, str)) {
+					replaceCount++;
 					str = str.replaceString(idx, replaceData, targetData);
 					break;
 				}
 			}
 		}
+		sendResponse({ result: true, length: replaceCount })
 		document.body.innerHTML = str;
 	}
 	else {
+		sendResponse({ result: true, length: 0 })
 		console.log('待处理');
 	}
 });

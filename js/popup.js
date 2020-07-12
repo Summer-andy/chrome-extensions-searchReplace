@@ -27,7 +27,17 @@ $('#replace_cmd').click(() => {
 	const replaceData = $('#example').val();
 	const targetData = $('#example2').val();
 	const isChecked = $('#four').prop('checked')
-	sendMessageToContentScript({cmd:'replace_cmd', size: 42, replaceData, targetData, isChecked}, function(response){});
+	sendMessageToContentScript({cmd:'replace_cmd', size: 42, replaceData, targetData, isChecked}, function(response){
+		if(response.result) {
+			chrome.notifications.create(null, {
+				type: 'image',
+				iconUrl: 'img/icon.png',
+				title: '查询',
+				message: `一共找到${response.length}处替换地方`,
+				imageUrl: 'img/icon.png'
+			});
+		}
+	});
 });
 
 
