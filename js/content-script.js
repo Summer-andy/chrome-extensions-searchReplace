@@ -20,29 +20,24 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 		const replaceData = request.replaceData;  // 被替换的内容
 		const targetData = request.targetData; // 替换的内容
 		const isChecked = request.isChecked; // 是否全文替换
-		const arr = getStringArrLength(replaceData, str); // 获取匹配内容的长度
-		if(isChecked) {
-			for (let index = 0; index < arr; index++) {
-				const idx = findStrIndex(str, replaceData, index - 1);
-				if(isReplaceWord(idx, str)) {
-					str = str.replaceString(idx, replaceData, targetData);
-					replaceCount++;
-				}
-			}
-		} else {
-			let index = 0
-			while (index < arr) {
-				index++;
-				const idx = findStrIndex(str, replaceData, index);
-				if(isReplaceWord(idx, str)) {
-					replaceCount++;
-					str = str.replaceString(idx, replaceData, targetData);
-					break;
-				}
-			}
-		}
+
+		var container = document.getElementById('root');
+		var regex = RegExp(replaceData, 'gi');
+
+		const instance =  findAndReplaceDOMText(container, {
+			find: regex,
+			replace: function(portion, match) {
+				called = true;
+				var el = document.createElement('em');
+				el.innerHTML = targetData;
+				return el;
+			},
+			forceContext: findAndReplaceDOMText.NON_INLINE_PROSE
+		});
+		console.log(instance);
+		console.log(instance.reverts.length);
+		console.log(instance.search());
 		sendResponse({ result: true, length: replaceCount })
-		document.body.innerHTML = str;
 	}
 	else {
 		sendResponse({ result: true, length: 0 })
