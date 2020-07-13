@@ -14,7 +14,6 @@ String.prototype.replaceString = function(index,str0,str1) {
 // 接收来自后台的消息
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
-	var replaceCount = 0;
 	if(request.cmd == 'replace_cmd') {
 		let str = document.body.innerHTML;
 		const replaceData = request.replaceData;  // 被替换的内容
@@ -23,21 +22,17 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 
 		var container = document.getElementById('root');
 		var regex = RegExp(replaceData, 'gi');
-
 		const instance =  findAndReplaceDOMText(container, {
 			find: regex,
 			replace: function(portion, match) {
 				called = true;
-				var el = document.createElement('em');
-				el.innerHTML = targetData;
-				return el;
+				// var el = document.createElement('span');
+				// el.innerHTML = targetData;
+				return targetData;
 			},
 			forceContext: findAndReplaceDOMText.NON_INLINE_PROSE
 		});
-		console.log(instance);
-		console.log(instance.reverts.length);
-		console.log(instance.search());
-		sendResponse({ result: true, length: replaceCount })
+		sendResponse({ result: true, length: instance.reverts.length })
 	}
 	else {
 		sendResponse({ result: true, length: 0 })
