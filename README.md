@@ -30,7 +30,7 @@ When doing product ppt, some nouns in certain pages need to be replaced uniforml
 - [x] Support text substitution
 - [x] Optimize the replacement method
 - [x] Complete a set of replacement mechanism that can adapt to all kinds of packaged pages
-- [] Optimize interactive experience
+- [ ] Optimize interactive experience
 
 
 ## 🤝 submission specifications
