@@ -20,7 +20,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 		const targetData = request.targetData; // 替换的内容
 		const isChecked = request.isChecked; // 是否全文替换
 
-		var container = document.getElementById('root');
+		var container = document.body
+
 		var regex = RegExp(replaceData, 'gi');
 		const instance =  findAndReplaceDOMText(container, {
 			find: regex,
