@@ -26,8 +26,8 @@ function sendMessageToContentScript(message, callback)
 $('#replace_cmd').click(() => {
 	const replaceData = $('#example').val();
 	const targetData = $('#example2').val();
-	const isChecked = $('#four').prop('checked');
-	sendMessageToContentScript({cmd:'replace_cmd', size: 42, replaceData, targetData, isChecked}, function(response){
+	// const isChecked = $('#four').prop('checked');
+	sendMessageToContentScript({cmd:'replace_cmd', size: 42, replaceData, targetData }, function(response){
 		if(response.result) {
 			chrome.notifications.create(null, {
 				type: 'image',
