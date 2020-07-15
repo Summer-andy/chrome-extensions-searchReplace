@@ -113,18 +113,15 @@ body {
   display: inline-block;
   font-size: 1em;
   padding: 1em 2em;
-  margin-top: 20px;
-  margin-bottom: 60px;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #ff0081;
+  background-color: #50ae55;
   color: #fff;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 }
 .bubbly-button:focus {
   outline: 0;
@@ -143,20 +140,16 @@ body {
 .bubbly-button:before {
   display: none;
   top: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-image: radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, transparent 20%, #50ae55 20%, transparent 30%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, transparent 10%, #50ae55 15%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
 }
 .bubbly-button:after {
   display: none;
   bottom: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-image: radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, transparent 10%, #50ae55 15%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%), radial-gradient(circle, #50ae55 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 }
-.bubbly-button:active {
-  transform: scale(0.9);
-  background-color: #e60074;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-}
+
 .bubbly-button.animate:before {
   display: block;
   animation: topBubbles ease-in-out 0.75s forwards;
@@ -191,60 +184,6 @@ body {
   }
 }
 
-.switch {
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.switch .slider {
-  position: relative;
-  display: inline-block;
-  height: 8px;
-  width: 32px;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #c5c5c5;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.switch .slider:after {
-  background: #eeeeee;
-  position: absolute;
-  left: -8px;
-  top: -8px;
-  display: block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  content: '';
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.switch label {
-  width: 200px;
-}
-
-.switch label:nth-of-type(2) {
-  margin-left: 20px;
-}
-
-.switch .input {
-  display: none;
-}
-.switch .input:checked ~ .slider:after {
-  left: 16px;
-}
-.switch .input:checked ~ .slider {
-  background: #fc5d9b;
-}
-.switch .input:checked ~ .slider:after {
-  background: #ef0460;
-}
 
 	</style>
 </head>
@@ -261,15 +200,9 @@ body {
       <input type="text" class="exp__input" id="example2" name="test" placeholder="请输入替换后的值" required>
       <label class="exp__label" for="example2" data-icon="" data-icon-ok="">替换后的值</label>
     </div>
-    <!-- <div>
-
-      <div class="switch">
-        <input id="four" class="input" type="checkbox" />
-        <label for="four" class="slider"></label>
-        <label for="four" class="label">是否全部匹配</label>
-      </div>
+    <div>
       <button id="replace_cmd" class="bubbly-button">替换</button>
-    </div> -->
+    </div>
   </div>
 	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
