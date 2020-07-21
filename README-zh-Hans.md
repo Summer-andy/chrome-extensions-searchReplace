@@ -1,7 +1,7 @@
 <h1 align="center">一款搜索并且替换文本的谷歌插件</h1>
 <div align="center">
 
-[English](https://github.com/Summer-andy/chrome-extensions-searchReplace/blob/master/README.md) &#124; English
+[English](https://github.com/Summer-andy/chrome-extensions-searchReplace/blob/master/README.md) &#124; 简体中文
 
 </div>
 
