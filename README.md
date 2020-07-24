@@ -52,3 +52,7 @@ When doing product ppt, some nouns in certain pages need to be replaced uniforml
 
 - Module Function Development (feature / xxx)
 - Bug fixes (bug / xxx)
+
+## FAQ
+
+ If you are interested in the implementation principle, please communicate with me through email.
