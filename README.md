@@ -12,7 +12,7 @@
 `chrome-extensions-searchReplace` is a search and replace chrome extensions.
 
 
-🎉![image](https://github.com/Summer-andy/chrome-extensions-searchReplace/blob/master/demo.gif)
+🎉 ![image](https://user-images.githubusercontent.com/30104912/87697347-8fe6b380-c7c4-11ea-8d9d-451088892a5c.png)
 
 
 ## Why is there this project?

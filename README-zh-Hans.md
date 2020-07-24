@@ -1,7 +1,7 @@
 <h1 align="center">一款搜索并且替换文本的谷歌插件</h1>
 <div align="center">
 
-[简体中文](https://github.com/Summer-andy/chrome-extensions-searchReplace/blob/master/README.md) &#124; English
+[English](https://github.com/Summer-andy/chrome-extensions-searchReplace/blob/master/README.md) &#124; 简体中文
 
 </div>
 
@@ -12,7 +12,7 @@
 `chrome-extensions-searchReplace` 是一款搜索并且替换文本的谷歌插件。
 
 
-🎉![image](https://github.com/Summer-andy/chrome-extensions-searchReplace/blob/master/demo.gif)
+🎉![image](https://user-images.githubusercontent.com/30104912/87697347-8fe6b380-c7c4-11ea-8d9d-451088892a5c.png)
 
 
 ## 为什么会有这个项目？
