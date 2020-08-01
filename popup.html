@@ -70,7 +70,7 @@ body {
 }
 
 .exp__input:focus {
-  padding-left: 42px;
+  padding-left: 20px;
   border-color: #bbb;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .exp__input:valid {
-  padding-left: 42px;
+  padding-left: 20px;
   border-color: green;
 }
 
@@ -123,9 +123,34 @@ body {
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
 }
+
+.bubbly-button2 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-left: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FF4500;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+
+.bubbly-button2:focus {
+  outline: 0;
+}
+
 .bubbly-button:focus {
   outline: 0;
 }
+
+
 .bubbly-button:before, .bubbly-button:after {
   position: absolute;
   content: '';
@@ -159,6 +184,7 @@ body {
   animation: bottomBubbles ease-in-out 0.75s forwards;
 }
 
+
 @keyframes topBubbles {
   0% {
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
@@ -187,21 +213,20 @@ body {
 
 	</style>
 </head>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
 <body>
   <div class="exp-container">
     <h2 class="exp-title">文本替换工具</h2>
     <div class="exp">
       <input type="text" class="exp__input" id="example" name="test" placeholder="请输入要替换的值" required>
-      <label class="exp__label" for="example" data-icon="" data-icon-ok="">目标替换值</label>
+      <label class="exp__label" for="example">目标替换值</label>
     </div>
     <div class="exp">
       <input type="text" class="exp__input" id="example2" name="test" placeholder="请输入替换后的值" required>
-      <label class="exp__label" for="example2" data-icon="" data-icon-ok="">替换后的值</label>
+      <label class="exp__label" for="example2">替换后的值</label>
     </div>
     <div>
       <button id="replace_cmd" class="bubbly-button">替换</button>
+      <button id="clear_cmd" class="bubbly-button2">清空</button>
     </div>
   </div>
 	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>

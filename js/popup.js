@@ -65,7 +65,6 @@ function inputHandler() {
 $('#replace_cmd').click(() => {
 	const replaceData = $('#example').val();
 	const targetData = $('#example2').val();
-	// const isChecked = $('#four').prop('checked');
 	sendMessageToContentScript({cmd:'replace_cmd', replaceData, targetData }, function(response){
 		if( response && response.result) {
 			chrome.notifications.create(null, {
@@ -78,6 +77,21 @@ $('#replace_cmd').click(() => {
 		}
 	});
 });
+
+
+$('#clear_cmd').click(() => {
+	if($('#example').val() !== '' || $('#example2').val() !== '') {
+		$('#example').val("");
+		$('#example2').val("");
+		chrome.notifications.create(null, {
+			type: 'image',
+			iconUrl: 'img/summer.png',
+			title: '清空提示',
+			message: '已清空输入框内容',
+			imageUrl: 'img/summer.png'
+		});
+	}
+})
 
 
 var animateButton = function(e) {
